@@ -240,7 +240,7 @@
 				<rule avp="Route-Record" required="false" max="2"/>
 			</request>
 			<answer>
-				<-- https:dstest.infoDiaDictDictionaryPush-Profile-Answer_Cx.html -->
+				<!-- https:dstest.infoDiaDictDictionaryPush-Profile-Answer_Cx.html -->
 				<rule avp="Session-Id" required="true" max="1"/>
 				<rule avp="DRMP" required="false" max="1"/>
 				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
