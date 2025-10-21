@@ -389,12 +389,6 @@
 		<avp name="Integrity-Key" code="626" must="M" may="" must-not="" may-encrypt="Y" vendor-id="10415">
 			<data type="OctetString"/>
 		</avp>
-		<avp name="User-Data-Request-Type(Obsolete)" code="627" must="M" may="" must-not="" may-encrypt="Y" vendor-id="10415">
-			<data type="Enumerated"/>
-			<item code="0" name="Complete-Profile"/>
-			<item code="1" name="Registered-Profile"/>
-			<item code="2" name="Unregistered-Profile"/>
-		</avp>
 		<avp name="Supported-Features" code="628" must="M" may="" must-not="" may-encrypt="N" vendor-id="10415">
 			<data type="Grouped">
 				<rule avp="Vendor-ID" required="false" min="0" max="0"/>
