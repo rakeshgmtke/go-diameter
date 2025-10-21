@@ -2509,7 +2509,7 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 		</command>
 		<command code="301" short="SA" name="Server-Assignment">
 			<request>
-				<!-- https://dstest.info/DiaDict/Dictionary/16777216.html -->
+				<!-- https://dstest.info/DiaDict/Dictionary/Server-Assignment-Request.html -->
 				<rule avp="Session-Id" required="true" max="1"/>
 				<rule avp="DRMP" required="false" max="1"/>
 				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
@@ -2534,7 +2534,7 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 				<rule avp="Route-Record" required="false" max="2"/>
 			</request>
 			<answer>
-				<!-- https://dstest.info/DiaDict/Dictionary/16777216.html -->
+				<!-- https://dstest.info/DiaDict/Dictionary/Server-Assignment-Answer.html -->
 				<rule avp="Session-Id" required="true" max="1"/>
 				<rule avp="DRMP" required="false" max="1"/>
 				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
@@ -2564,7 +2564,7 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 		</command>
 		<command code="302" short="LI" name="Location-Info">
 			<request>
-				<!-- https://dstest.info/DiaDict/Dictionary/16777216.html -->
+				<!-- https://dstest.info/DiaDict/Dictionary/Location-Info-Request.html -->
 				<rule avp="Session-Id" required="true" max="1"/>
 				<rule avp="DRMP" required="false" max="1"/>
 				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
@@ -2583,7 +2583,7 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 				<rule avp="Route-Record" required="false" max="2"/>
 			</request>
 			<answer>
-				<!-- https://dstest.info/DiaDict/Dictionary/16777216.html -->
+				<!-- https://dstest.info/DiaDict/Dictionary/Location-Info-Answer.html -->
 				<rule avp="Session-Id" required="true" max="1"/>
 				<rule avp="DRMP" required="false" max="1"/>
 				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
@@ -2606,7 +2606,7 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 		</command>
 		<command code="303" short="MA" name="Multimedia-Auth">
 			<request>
-				<!-- https://dstest.info/DiaDict/Dictionary/16777216.html -->
+				<!-- https://dstest.info/DiaDict/Dictionary/Multimedia-Auth-Request.html -->
 				<rule avp="Session-Id" required="true" max="1"/>
 				<rule avp="DRMP" required="false" max="1"/>
 				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
@@ -2626,7 +2626,7 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 				<rule avp="Route-Record" required="false" max="2"/>
 			</request>
 			<answer>
-				<!-- https://dstest.info/DiaDict/Dictionary/16777216.html -->
+				<!-- https://dstest.info/DiaDict/Dictionary/Multimedia-Auth-Answer.html -->
 				<rule avp="Session-Id" required="true" max="1"/>
 				<rule avp="DRMP" required="false" max="1"/>
 				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
@@ -2649,20 +2649,81 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 		</command>
 		<command code="304" short="RT" name="Registration-Termination">
 			<request>
-				<!-- https://dstest.info/DiaDict/Dictionary/16777216.html -->
+				<!-- https://dstest.info/DiaDict/Dictionary/Registration-Termination-Request_Cx.html -->
+				<rule avp="Session-Id" required="true" max="1"/>
+				<rule avp="DRMP" required="false" max="1"/>
+				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
+				<rule avp="Auth-Session-State" required="true" max="1"/>
+				<rule avp="Origin-Host" required="true" max="1"/>
+				<rule avp="Origin-Realm" required="true" max="1"/>
+				<rule avp="Destination-Host" required="false" max="1"/>
+				<rule avp="Destination-Realm" required="true" max="1"/>
+				<rule avp="User-Name" required="true" max="1"/>
+				<rule avp="Deregistration-Reason" required="true" max="1"/>
+				<rule avp="Supported-Features" required="false" max="1"/>
+				<rule avp="Associated-Identities" required="false" max="1"/>
+				<rule avp="Proxy-Info" required="false" max="2"/>
+				<rule avp="Route-Record" required="false" max="2"/>
 			</request>
 			<answer>
-				<!-- https://dstest.info/DiaDict/Dictionary/16777216.html -->
+				<!-- https://dstest.info/DiaDict/Dictionary/Registration-Termination-Answer.html -->
+				<rule avp="Session-Id" required="true" max="1"/>
+				<rule avp="DRMP" required="false" max="1"/>
+				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
+				<rule avp="Result-Code" required="false" max="1"/>
+				<rule avp="Experimental-Result" required="false" max="1"/>
+				<rule avp="Auth-Session-State" required="true" max="1"/>
+				<rule avp="Origin-Host" required="true" max="1"/>
+				<rule avp="Origin-Realm" required="true" max="1"/>
+				<rule avp="Associated-Identities" required="false" max="1"/>
+				<rule avp="Supported-Features" required="false" max="1"/>
+				<rule avp="Failed-AVP" required="false" max="2"/>
+				<rule avp="Proxy-Info" required="false" max="2"/>
+				<rule avp="Route-Record" required="false" max="2"/>
 			</answer>
 		</command>
 		<command code="305" short="PP" name="Push-Profile">
-			<request/>
-			<answer/>
+			<request>
+				<!-- https://dstest.info/DiaDict/Dictionary/Push-Profile-Request_Cx.html -->
+				<rule avp="Session-Id" required="true" max="1"/>
+				<rule avp="DRMP" required="false" max="1"/>
+				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
+				<rule avp="Auth-Session-State" required="true" max="1"/>
+				<rule avp="Origin-Host" required="true" max="1"/>
+				<rule avp="Origin-Realm" required="true" max="1"/>
+				<rule avp="Destination-Host" required="false" max="1"/>
+				<rule avp="Destination-Realm" required="true" max="1"/>
+				<rule avp="User-Name" required="true" max="1"/>
+				<rule avp="SIP-Auth-Data-Item" required="true" max="1"/>
+				<rule avp="Charging-Information" required="false" max="1"/>
+				<rule avp="Supported-Features" required="false" max="1"/>
+				<rule avp="User-Data" required="false" max="1"/>
+				<rule avp="Proxy-Info" required="false" max="2"/>
+				<rule avp="Route-Record" required="false" max="2"/>
+			</request>
+			<answer>
+				<-- https:dstest.infoDiaDictDictionaryPush-Profile-Answer_Cx.html -->
+				<rule avp="Session-Id" required="true" max="1"/>
+				<rule avp="DRMP" required="false" max="1"/>
+				<rule avp="Vendor-Specific-Application-Id" required="true" max="1"/>
+				<rule avp="Result-Code" required="false" max="1"/>
+				<rule avp="Experimental-Result" required="false" max="1"/>
+				<rule avp="Auth-Session-State" required="true" max="1"/>
+				<rule avp="Origin-Host" required="true" max="1"/>
+				<rule avp="Origin-Realm" required="true" max="1"/>
+				<rule avp="Supported-Features" required="false" max="1"/>
+				<rule avp="Failed-AVP" required="false" max="2"/>
+				<rule avp="Proxy-Info" required="false" max="2"/>
+				<rule avp="Route-Record" required="false" max="2"/>
+			</answer>
 		</command>
 		<avp name="Visited-Network-Identifier" code="600" must="M" may="" must-not="" may-encrypt="N" vendor-id="10415">
 			<data type="OctetString"/>
 		</avp>
 		<avp name="Public-Identity" code="601" must="M" may="" must-not="" may-encrypt="Y" vendor-id="10415">
+			<data type="UTF8String"/>
+		</avp>
+		<avp name="Server-Name" code="602" must="V,M" may="P" must-not="-" may-encrypt="N" vendor-id="10415">
 			<data type="UTF8String"/>
 		</avp>
 		<avp name="Server-Capabilities" code="603" must="V,M" may="P" must-not="-" may-encrypt="N" vendor-id="10415">
@@ -2678,9 +2739,6 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 		</avp>
 		<avp name="Optional-Capability" code="605" must="V,M" may="P" must-not="-" may-encrypt="N" vendor-id="10415">
 			<data type="Unsigned32"/>
-		</avp>
-		<avp name="Server-Name" code="602" must="V,M" may="P" must-not="-" may-encrypt="N" vendor-id="10415">
-			<data type="UTF8String"/>
 		</avp>
 		<avp name="User-Data" code="606" must="M" may="" must-not="" may-encrypt="Y" vendor-id="10415">
 			<data type="OctetString"/>
@@ -2834,21 +2892,6 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 				<rule avp="Digest-HA1" required="false" min="0" max="0"/>
 			</data>
 		</avp>
-		<avp name="Digest-Realm" code="104" must="" may="" must-not="" may-encrypt="-" vendor-id="0">
-			<data type="UTF8String"></data>
-		</avp>
-		<avp name="Digest-Algorithm" code="111" must="" may="" must-not="" may-encrypt="-" vendor-id="0">
-			<data type="UTF8String"></data>
-		</avp>
-		<avp name="Digest-Qop" code="110" must="" may="" must-not="" may-encrypt="-" vendor-id="0">
-			<data type="UTF8String"></data>
-		</avp>
-		<avp name="Digest-HA1" code="121" must="" may="" must-not="" may-encrypt="-" vendor-id="0">
-			<data type="UTF8String"></data>
-		</avp>
-		<avp name="Access-Network-Information" code="1263" must="V,M" may="P" must-not="-" may-encrypt="N" vendor-id="10415">				
-			<data type="OctetString"></data>
-		</avp>
 		<avp name="Wildcarded-IMPU" code="636" must="" may="" must-not="" may-encrypt="N" vendor-id="10415">
 			<data type="UTF8String"/>
 		</avp>
@@ -2920,6 +2963,21 @@ var tgppcxXML = `<?xml version="1.0" encoding="UTF-8"?>
 				<item code="3" name="PRIORITY-3"/>
 				<item code="4" name="PRIORITY-4"/>
 			</data>
+		</avp>
+		<avp name="Digest-Realm" code="104" must="" may="" must-not="" may-encrypt="-" vendor-id="0">
+			<data type="UTF8String"/>
+		</avp>
+		<avp name="Digest-Algorithm" code="111" must="" may="" must-not="" may-encrypt="-" vendor-id="0">
+			<data type="UTF8String"/>
+		</avp>
+		<avp name="Digest-Qop" code="110" must="" may="" must-not="" may-encrypt="-" vendor-id="0">
+			<data type="UTF8String"/>
+		</avp>
+		<avp name="Digest-HA1" code="121" must="" may="" must-not="" may-encrypt="-" vendor-id="0">
+			<data type="UTF8String"/>
+		</avp>
+		<avp name="Access-Network-Information" code="1263" must="V,M" may="P" must-not="-" may-encrypt="N" vendor-id="10415">
+			<data type="OctetString"/>
 		</avp>
 	</application>
 </diameter>`
